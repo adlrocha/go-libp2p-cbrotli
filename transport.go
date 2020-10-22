@@ -38,7 +38,7 @@ func New() *Transport {
 func (t *Transport) NewConn(raw net.Conn, isServer bool) (compression.CompressedConn, error) {
 	return &compConn{
 		raw: raw,
-		w:   brotli.NewWriter(raw, brotli.WriterOptions{Quality: 9}),
+		w:   brotli.NewWriter(raw, brotli.WriterOptions{Quality: 2}),
 	}, nil
 }
 
