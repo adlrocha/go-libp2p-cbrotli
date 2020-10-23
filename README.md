@@ -30,15 +30,17 @@ go get github.com/libp2p/go-libp2p-cbrotli
 ```
 
 ### Installing C implementation of Brotli
-This transport needs the CGO binding to work. To run this transport you will need to have Brotli's library in C installed. Be sure to have CMake and GCC installed to be able to compile the library code.
+This transport needs the CGO binding to work. To run this transport you will need to have [Brotli's library in C installed](https://github.com/google/brotli). Be sure to have CMake and GCC installed to be able to compile the library code.
 
 To compile the Brotli library run the following commands:
 ```
+$ git clone https://github.com/google/brotli
+$ cd brotli
 $ mkdir out && cd out
 $ ../configure-cmake
 $ make
 $ make test
-$ make install
+$ sudo make install
 ```
 
 
